@@ -67,3 +67,13 @@
     width: 100%;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
+
+/*Js*/
+
+.error{
+    border: 2px solid rgba(255, 0, 0, 0.7) !important;
+}
+
+.error::placeholder{
+    color: rgba(255, 0, 0, 0.7);
+}
