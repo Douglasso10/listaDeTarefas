@@ -18,9 +18,13 @@ const adicionarTarefa = () => {
     const paragrafo = document.createElement("p");
     paragrafo.innerText = input.value;
 
+    paragrafo.addEventListener("click", () => paragrafoClick ());
+
     const deleteIcon = document.createElement("i");
     deleteIcon.classList.add("far");
     deleteIcon.classList.add("fa-trash-alt");
+
+    deleteIcon.addEventListener("click", () => deleteClick ());
 
     criarTarefa.appendChild(paragrafo);
     criarTarefa.appendChild(deleteIcon);
@@ -29,6 +33,16 @@ const adicionarTarefa = () => {
 
     input.value = "";
     
+}
+
+const clickParagrafo = (paragrafoClick) => {
+    const tasks = tarefa.childNodes;
+
+    for (const tasks of tasks){
+        if (tasks.firstChild.isSameNode(paragrafoClick)){
+            
+        }
+    }
 }
 
 const mudarInput = () =>{
