@@ -18,13 +18,14 @@ const adicionarTarefa = () => {
     const paragrafo = document.createElement("p");
     paragrafo.innerText = input.value;
 
-    paragrafo.addEventListener("click", () => paragrafoClick ());
+    paragrafo.addEventListener('click', () => handleClick (paragrafo))
 
     const deleteIcon = document.createElement("i");
     deleteIcon.classList.add("far");
     deleteIcon.classList.add("fa-trash-alt");
 
-    deleteIcon.addEventListener("click", () => deleteClick ());
+    deleteIcon.addEventListener('click' , () => handleDeleteClick(criarTarefa,paragrafo))
+  
 
     criarTarefa.appendChild(paragrafo);
     criarTarefa.appendChild(deleteIcon);
@@ -35,15 +36,26 @@ const adicionarTarefa = () => {
     
 }
 
-const clickParagrafo = (paragrafoClick) => {
+const handleClick = (paragrafo) => {
     const tasks = tarefa.childNodes;
 
-    for (const tasks of tasks){
-        if (tasks.firstChild.isSameNode(paragrafoClick)){
-            
+    for(const task of tasks){
+        if (task.firstChild.isSameNode(paragrafo)){
+            task.firstChild.classList.toggle('completed')
         }
     }
 }
+
+const handleDeleteClick = (criarTarefa,paragrafo) => {
+    const tasks = tarefa.childNodes;
+
+    for (const task of tasks){
+        if (task.firstChild.isSameNode(paragrafo)){
+            criarTarefa.remove()
+        } 
+    }
+}
+
 
 const mudarInput = () =>{
     const inputValido = validaInput();
