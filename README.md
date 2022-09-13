@@ -7,3 +7,5 @@ Tecnologias usadas:
 HTML;
 CSS;
 Javascript.
+
+Link do projeto: https://douglasso10.github.io/listaDeTarefas/
