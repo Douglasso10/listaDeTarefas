@@ -99,3 +99,11 @@
 .completed{
     text-decoration: line-through;
 }
+ 
+@media screen and (min-width:475px) and (max-width:1145px){
+    .cor_de_fundo{
+       width: 100%;
+       margin: 10px;
+       background: linear-gradient(90deg, #27187E 0% , #758BFD 100%);
+    }
+}
